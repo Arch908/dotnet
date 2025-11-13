@@ -1,0 +1,25 @@
+﻿@model FoodMenu.Models.MenuItem
+@{
+    ViewData["Title"] = "Create Menu Item";
+}
+
+<h2>Create</h2>
+
+<form asp-action="Create" method="post">
+    <div>
+        <label asp-for="Name"></label>
+        <input asp-for="Name" />
+    </div>
+    <div>
+        <label asp-for="Description"></label>
+        <textarea asp-for="Description"></textarea>
+    </div>
+    <div>
+        <label asp-for="Price"></label>
+        <input asp-for="Price" />
+    </div>
+    <div>
+        <input asp-for="IsAvailable" /> <label asp-for="IsAvailable">Available</label>
+    </div>
+    <button type="submit">Save</button>
+</form>

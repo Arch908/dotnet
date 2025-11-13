@@ -1,0 +1,22 @@
+﻿@model FoodMenu.ViewModels.LoginViewModel
+@{
+    ViewData["Title"] = "Login";
+}
+
+<h2 style="text-align:center; margin-bottom:40px;">Login</h2>
+
+<form asp-action="Login" method="post">
+    <div>
+        <label style="margin-right:63.5px;" asp-for="Email"></label>
+        <input asp-for="Email" />
+    </div>
+    <div>
+        <label style="margin-right:30px;" asp-for="Password"></label>
+        <input asp-for="Password" type="password" />
+    </div>
+    <div>
+        <input style="margin-top:25px;" asp-for="RememberMe" /> <label asp-for="RememberMe">Remember me</label>
+    </div>
+    <input type="hidden" asp-for="ReturnUrl"/>
+    <button style="margin-top:10px;background-color: lightgreen;color: white;font-weight:600;" type="submit">Login</button>
+</form>

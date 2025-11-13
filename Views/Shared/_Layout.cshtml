@@ -1,0 +1,39 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewData["Title"] - Food Menu</title>
+    <link rel="stylesheet" href="~/css/site.css"/>
+</head>
+<body>
+    <nav>
+        <a href="/Home">Home</a> |
+        <a href="/Menu">Menu</a> |
+        @if (User?.Identity?.IsAuthenticated ?? false)
+        {
+        <span>Hello @User.Identity.Name</span>
+                
+                <form method="post" asp-controller = "Account" asp-action="Logout" style="display:inline">
+
+                <button style=" background-color: red;color: white;font-weight:600;" type="submit">
+                    Logout
+                </button>
+                </form >
+                }
+        else
+        {
+        <a href="/Account/Login">Login</a>  
+        <span> | </span>
+        <a href="/Account/Register">Register</a>
+
+                }
+    </nav>
+
+    <div class="container">
+        @RenderBody()
+    </div>
+    @RenderSection("Scripts", required: false)
+
+</body>
+</html>

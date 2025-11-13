@@ -1,0 +1,13 @@
+﻿@model FoodMenu.Models.MenuItem
+@{
+    ViewData["Title"] = "Delete Menu Item";
+}
+
+<h2>Delete</h2>
+
+<form asp-action="Delete" method="post">
+    <input type="hidden" asp-for="Id" />
+    <p>Are you sure you want to delete <strong>@Model.Name</strong>?</p>
+    <button type="submit">Yes, Delete</button>
+    <a asp-action="Index">Cancel</a>
+</form>

@@ -1,0 +1,27 @@
+﻿@model FoodMenu.ViewModels.RegisterViewModel
+@{
+    ViewData["Title"] = "Register";
+}
+
+<h2 style="text-align:center; margin-bottom:40px;">Register</h2>
+
+<form asp-action="Register" method="post">
+    <div>
+        <label asp-for="Email" style="margin-right:93.5px;"></label>
+        <input asp-for="Email" />
+        <span asp-validation-for="Email"></span>
+    </div>
+    <div>
+        <label asp-for="Password" style="margin-right:61.5px;"></label>
+        <input asp-for="Password" type="password" />
+    </div>
+    <div>
+        <label asp-for="ConfirmPassword" style="margin-right:6px;"></label>
+        <input asp-for="ConfirmPassword" type="password" />
+    </div>
+    <button type="submit" style="margin-top:20px;background-color: lightgreen;color: white;font-weight:600;">Register</button>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
