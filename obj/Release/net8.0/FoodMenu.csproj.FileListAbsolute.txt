@@ -145,3 +145,4 @@ D:\FoodMenu\obj\Release\net8.0\refint\FoodMenu.dll
 D:\FoodMenu\obj\Release\net8.0\FoodMenu.pdb
 D:\FoodMenu\obj\Release\net8.0\FoodMenu.genruntimeconfig.cache
 D:\FoodMenu\obj\Release\net8.0\ref\FoodMenu.dll
+D:\FoodMenu\obj\Release\net8.0\FoodMenu.sourcelink.json
